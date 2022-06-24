@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>javascript</h1>
+	<h2>var local</h2>
+
+</body>
+<script type="text/javascript">
+	var name = "global";
+	
+	function check() {
+		var name = "local";
+		document.write(name);
+	}
+	check();
+	document.write("<br>" + name);
+</script>
+</html>

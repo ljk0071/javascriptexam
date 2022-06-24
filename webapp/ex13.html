@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>javascript</h1>
+<h2>계산기</h2>
+<br>
+
+
+<table>
+	<tr>
+		<td colspan="4"><input type="text" id="result" value=""></td>
+	</tr>
+	<tr>
+		<td><input type="button" id="sum" value="+"></td>
+		<td><input type="button" id="sub" value="-"></td>
+		<td><input type="button" id="mul" value="X"></td>
+		<td><input type="button" id="div" value="/"></td>
+	</tr>
+	<tr>
+		<td><input type="button" id="7" value="7"></td>
+		<td><input type="button" id="8" value="8"></td>
+		<td><input type="button" id="9" value="9"></td>
+		<td rowspan="4"><input type="button" id="enter" value="="></td>
+		
+	</tr>
+	<tr>
+		<td><input type="button" id="4" value="4"></td>
+		<td><input type="button" id="5" value="5"></td>
+		<td><input type="button" id="6" value="6"></td>
+		
+	</tr>
+	<tr>
+		<td><input type="button" id="1" value="1"></td>
+		<td><input type="button" id="2" value="2"></td>
+		<td><input type="button" id="3" value="3"></td>
+		
+	</tr>
+	<tr>
+		<td colspan="3"><input type="button" id="0" value="0"></td>
+	</tr>
+</table>
+</body>
+<script type="text/javascript">
+	var sum = document.getElementById('sum');
+	var sub = document.getElementById('sub');
+	var mul = document.getElementById('mul');
+	var div = document.getElementById('div');
+	var res = document.getElementById('result');
+	var enter = document.getElementById('enter');
+	var arr = [];
+	for(var i=0;i<10;i++) {
+		arr[i] = (document.getElementById(i));
+	};
+	arr[0].onclick = function() {
+		var no = parseInt(arr[0].value);
+		res.value += no;
+	}
+	arr[1].onclick = function() {
+		var no = parseInt(arr[1].value);
+		res.value += no;
+	}
+	arr[2].onclick = function() {
+		var no = parseInt(arr[2].value);
+		res.value += no;
+	}
+	arr[3].onclick = function() {
+		var no = parseInt(arr[3].value);
+		res.value += no;
+	}
+	arr[4].onclick = function() {
+		var no = parseInt(arr[4].value);
+		res.value += no;
+	}
+	arr[5].onclick = function() {
+		var no = parseInt(arr[5].value);
+		res.value += no;
+	}
+	arr[6].onclick = function() {
+		var no = parseInt(arr[6].value);
+		res.value += no;
+	}
+	arr[7].onclick = function() {
+		var no = parseInt(arr[7].value);
+		res.value += no;
+	}
+	arr[8].onclick = function() {
+		var no = parseInt(arr[8].value);
+		res.value += no;
+	}
+	arr[9].onclick = function() {
+		var no = parseInt(arr[9].value);
+		res.value += no;
+	}
+	sum.onclick = function() {
+		res.value += ' + ';
+	}
+	sub.onclick = function() {
+		res.value += ' - ';
+	}
+	mul.onclick = function() {
+		res.value += ' x ';
+	}
+	div.onclick = function() {
+		res.value += ' / ';
+	}
+	enter.onclick = function() {
+		var calc = []
+		calc = String(res.value).split(' ');
+		switch (calc[1]) {
+		case '+' :
+			res.value = parseInt(calc[0]) + parseInt(calc[2]);
+			break;
+		case '-' :
+			res.value = parseInt(calc[0]) - parseInt(calc[2]);
+			break;
+		case 'x' :
+			res.value = parseInt(calc[0]) * parseInt(calc[2]);
+			break;
+		case '/' :
+			res.value = parseInt(calc[0]) / parseInt(calc[2]);
+			break;
+		default :
+			res.value = "잘못된 기호를 입니다.";
+		}
+	}
+	
+	
+</script>
+</html>

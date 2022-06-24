@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>javascript</h1>
+<h2>object</h2>
+
+</body>
+<script type="text/javascript">
+	var arr = [];
+	var guestbookVo = {
+			name : "dlwlrma"
+			,pw : "123"
+			,content : "hi its my first visit"
+			,showInfo : function() {
+				return this.name +", "+this.pw+", "+this.content;
+			}
+	};
+	document.write(guestbookVo.showInfo());
+	
+	var pList = [];
+	var pVo1 = {
+			name : 'dasd'
+			,hp : "123123"
+			,company : "010-21312-123123"
+	};
+	var pVo2 = {};
+	pVo2.name = "asdasdsadasd";
+	pVo2.hp="asdasdasdasd12312312";
+	pVo2.company="asd12321312";
+	var pVo3 ={
+			name : "asdas123133"
+	};
+	pVo3.hp = "0123213";
+	pVo3.company = "0123-12321-12";
+	
+	pList[0] = pVo1;
+	pList[1] = pVo2;
+	pList.push(pVo3);
+	
+	for(var i=0;i<pList.length;i++) {
+		console.log(pList[i]);
+	}
+	pList.pop();
+	for(var i=0;i<pList.length;i++) {
+		console.log(pList[i]);
+	}
+	console.log(pList);
+</script>
+</html>

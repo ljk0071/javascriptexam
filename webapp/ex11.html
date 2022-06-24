@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>javascript</h1>
+<h2>pop, push</h2>
+
+</body>
+
+<script type="text/javascript">
+	var arr = [];
+	arr[0] = 1;
+	arr[1] = 2;
+	arr[2] = 45;
+	arr[3] = 3;
+	
+	arr.push(7);
+	for(var i=0;i<arr.length;i++) {
+		if ( i == arr.length-1 ) {
+			document.write(arr[i]);
+		} else {
+			document.write(arr[i]+ ", ");	
+		}
+		
+	}
+	document.write("<br>");
+	arr.pop();
+	for(var i=0;i<arr.length;i++) {
+		if ( i == arr.length-1 ) {
+			document.write(arr[i]);
+		} else {
+			document.write(arr[i]+ ", ");	
+		}
+	}
+	document.write("<br>");
+	arr.splice(2, 1);
+	for(var i=0;i<arr.length;i++) {
+		if ( i == arr.length-1 ) {
+			document.write(arr[i]);
+		} else {
+			document.write(arr[i]+ ", ");	
+		}
+	}
+	document.write("<br>");
+	arr.push(4);
+	for(var i=0;i<arr.length;i++) {
+		if ( i == arr.length-1 ) {
+			document.write(arr[i]);
+		} else {
+			document.write(arr[i]+ ", ");	
+		}
+	}
+</script>
+</html>

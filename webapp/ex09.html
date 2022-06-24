@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>javascript</h1>
+	<h2>array</h2>
+
+</body>
+
+<script type="text/javascript">
+	var arr = [];
+	arr[0] = 1;
+	arr[1] = 2.5;
+	arr[2] = true;
+	arr[3] = 'hello';
+	document.write(arr);
+	var arr2 = [273, 'string', 5>3, plus(500,20), function(){return 500+20}, [273,103]];
+	
+	function plus(a,b) {
+		var sum = a+b;
+		return sum;
+	}
+	document.write("<br>"+arr2[4]());
+	for (var i=0;i<arr2.length;i++) {
+		console.log(arr2[i]);
+	}
+</script>
+</html>

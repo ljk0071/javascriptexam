@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>javascript</h1>
+<h2>event</h2>
+<div>
+	<input id="a" type="text" value="">
+	<input id="b" type="text" value="">
+	<input id="btn" type="button" VALUE="js테스트버튼" />
+	<h1 id="display">이름출력영역</h1>
+</div>
+
+
+</body>
+<script type="text/javascript">
+	window.onload = function(){
+		var testButton = document.getElementById("btn");
+		var testArea = document.getElementById("display");
+		var a = document.getElementById("a");
+		var b = document.getElementById("b");
+		testButton.onclick = function(){
+			
+			var ano = parseInt(a.value);
+			var bno = parseInt(b.value);
+			
+			testArea.innerHTML = (ano+bno);
+		};
+		
+	};
+
+</script>
+
+</html>
